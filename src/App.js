@@ -4,7 +4,7 @@ import Header from "./components/header";
 import Item from "./components/item";
 
 function App() {
-  const handleName = (name) => alert(` Hello this is ${name}`);
+  const alertProduct = (name) => alert(` Hello this is ${name}`);
   return (
     <div
       style={{
@@ -15,9 +15,9 @@ function App() {
       }}
     >
       <Header />
-      <Item img={"./tab1.jpg"} name="Paris" price= '100$' handleName={handleName} />
-      <Item img={"./tab2.jpg"} name="Piano" price='200$' handleName={handleName} />
-      <Item img={"./tab3.jpg"} name="Tunisia" price='300$' handleName={handleName} />
+      <Item img={"./tab1.jpg"} name="Paris" price= '100$' alertProduct={alertProduct} />
+      <Item img={"./tab2.jpg"} name="Piano" price='200$' alertProduct={alertProduct} />
+      <Item img={"./tab3.jpg"} name="Tunisia" price='300$' alertProduct={alertProduct} />
       <Item/>
     </div>
   );

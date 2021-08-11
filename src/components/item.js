@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from 'prop-types';
 
 const Item = (props) => {
-  const{name,handleName}=props;
+  const{name,alertProduct}=props;
   return (
     <div
       style={{
@@ -13,9 +13,10 @@ const Item = (props) => {
         marginBottom: "10px",
         borderBottom: "solid",
       }}
+      onClick={() => alertProduct(name)}
     >
       <img
-      onClick={() => handleName(name)}
+      
         style={{ width: "300px", height: "300px", marginBottom:'10px' }}
         src={props.img}
         alt=""
@@ -33,6 +34,6 @@ Item.defaultProps = {
 Item.propTypes = {
     name: PropTypes.string,
     price: PropTypes.string,
-    handleName : PropTypes.func
+    alertProduct : PropTypes.func
 }
 export default Item;

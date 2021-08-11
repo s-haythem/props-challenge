@@ -32,6 +32,7 @@ Item.defaultProps = {
 }
 Item.propTypes = {
     name: PropTypes.string,
-    price: PropTypes.string
+    price: PropTypes.string,
+    handleName : PropTypes.func
 }
 export default Item;
